@@ -4,6 +4,7 @@ import SearchBar from './components/search_bar'; //import our search bar
 import VideoList from './components/video_list';
 import YTSearch from './modules/yt_api_search';
 //import css styles
+import 'bulma/css/bulma.css'
 import './assets/css/main.css';
 const API_KEY = 'AIzaSyA6rw_zROa1rAqzbCgVLrKbSZiZ32CXpoQ';
 
@@ -27,7 +28,7 @@ class App extends Component {
 
     render (){
         return (
-            <div>
+            <div className ="container">
                 <SearchBar/>
                 {/* pass the state of the App.state.videosArray [] into the video list as a prop(erty) */}
                 <VideoList videosArray = {this.state.videosArray}/>

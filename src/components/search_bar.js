@@ -23,7 +23,7 @@ class SearchBar extends Component  {
         return (
             <div className ="search-bar">
                 <input type ="text" 
-                    className= 'search-bar__input' 
+                    className= 'search-bar__input input is-rounded is-large' 
                     placeholder ="Search Youtube..."
                     value = {this.state.term} //this value will only change when the state changes, which happens upon rerender by this.SetState 
                     onChange ={ (event) => this.setState({term:event.target.value}) } //take change event and update our state with the input text
