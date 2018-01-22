@@ -17,7 +17,17 @@ const VideoListItem = ({video, video:{kind, snippet:{title}} }) =>{
     // console.log(kind);
     // console.log(title);
    
-    return <li className ="video-list__item"> Video </li>;
+    return (
+        <li className ="video-list-item"> 
+            <div className="video-list-item__image-box">
+            video
+            </div> 
+            <div className="video-list-item__text-wrapper">
+            <span className="video-list-item__text">{title}</span>
+            </div>
+        </li>
+    );
+
 }
 
 export default VideoListItem;
