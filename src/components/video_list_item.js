@@ -16,11 +16,11 @@ const VideoListItem = ({video, video:{kind, snippet:{title}} }) =>{
     console.log(video);
     // console.log(kind);
     // console.log(title);
-   
+   const imgUrl = video.snippet.thumbnails.default.url;
     return (
         <li className ="video-list-item"> 
             <div className="video-list-item__image-box">
-            video
+                <img src={imgUrl} atl="video thumbnail"/>
             </div> 
             <div className="video-list-item__text-wrapper">
             <span className="video-list-item__text">{title}</span>
