@@ -12,18 +12,20 @@ import React from 'react';
         property is actually an object with a property called title, so this is a nested destructured statement it then unpacks that as well
   *Note if you just wanted to destructure an idividual property you would have to pass in that property as a prop to videoListItem and then just use { propertyNameThatYouGaveItWhenYouPassedItIn, otherPropertyName:{iGuessThisOneIsNested} } and that would destructure it
 */
-const VideoListItem = ({video, video:{kind, snippet:{title}} }) =>{
+const VideoListItem = ({video, onVideoSelect, video:{snippet:{title}} }) =>{
     console.log(video);
     // console.log(kind);
     // console.log(title);
    const imgUrl = video.snippet.thumbnails.default.url;
     return (
-        <li className ="video-list-item"> 
+        <li className ="video-list-item" onClick = { () => onVideoSelect(video) }> 
             <div className="video-list-item__image-box">
-                <img src={imgUrl} atl="video thumbnail"/>
+                <img src={imgUrl} alt="video thumbnail"/>
             </div> 
+
             <div className="video-list-item__text-wrapper">
             <span className="video-list-item__text">{title}</span>
+            
             </div>
         </li>
     );

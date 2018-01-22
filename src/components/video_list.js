@@ -9,10 +9,16 @@ import VideoListItem from './video_list_item';
     *****note that when {} braces are used outside of html tags they represent an object, inside they just represent javascript being evaluated. 
          key = {video.etag} is setting VideoListItems prop key to the tag id from the video object YOU MUST HAVE UNIQUE KEYS THAT DO NOT CHANGE WHEN GENERATING LISTS IN REACT
 */
+
+
 const VideoList = (props) => {
     const videoItemsArray = props.videosArray.map((video) =>{
-        // console.log(video);
-        return <VideoListItem key= {video.etag} video ={video}/> //each item gets one video from the array then return the array of video list items
+        return(
+        <VideoListItem 
+            onVideoSelect ={props.onVideoSelect}
+            key= {video.etag} 
+            video ={video}
+        />) //each item gets one video from the array then return the array of video list items
     });
    
     return (
