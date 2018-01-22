@@ -6,16 +6,16 @@ import YTSearch from './modules/yt_api_search';
 //import css styles
 import 'bulma/css/bulma.css'
 import './assets/css/main.css';
+ 
 const API_KEY = 'AIzaSyA6rw_zROa1rAqzbCgVLrKbSZiZ32CXpoQ';
+ /* 
+    curly braces are used to place javascript within html tags only otherwise we don't use curly braces.
+    index is the root of our application every other application will be imported here.
+    ytsearch takes an object of parameters for the search and returns an array of video objects,
+        it is inside the cosntructor function so that when the APP is rendered on the page the it will update its state and populate its videos state array
+         default videos 
+*/
 
-
- // curly braces are used to place javascript within html tags only otherwise we don't use curly braces
-
-// index is the root of our application every other application will be imported here
-// turned this into a class based component bc we need to 
-// ytsearch takes an object of parameters for the search and returns an array of video objects,
-// it is inside the cosntructor function so that when the APP is rendered on the page the it will update its state and populate its videos state array
-// default videos 
 class App extends Component {
     constructor(props){
         super(props);
