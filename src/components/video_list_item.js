@@ -14,8 +14,8 @@ import React from 'react';
 */
 const VideoListItem = ({video, video:{kind, snippet:{title}} }) =>{
     console.log(video);
-    console.log(kind);
-    console.log(title);
+    // console.log(kind);
+    // console.log(title);
    
     return <li className ="video-list__item"> Video </li>;
 }
