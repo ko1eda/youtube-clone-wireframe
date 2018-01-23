@@ -1,12 +1,10 @@
 import _ from 'lodash';
-
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/search_bar'; //import our search bar
 import VideoList from './components/video_list';
 import VideoDetail from './components/video_detail';
 import YTSearch from './modules/yt_api_search';
-
 
 //import css styles
 import 'bulma/css/bulma.css'
@@ -52,7 +50,7 @@ class App extends Component {
     //SearchBar.props.onVideoSearch = (searchTerm) => {this.videoSearch(searchTerm)} essentially we defined a method on searchbars props object that takes a parameter called searchTerm and then calls our App.videoSearchMethod with that term passed in 
     render (){
         /* 
-            this uses lodash to convert our search function to a debounced function meaning every time onVideoSearch method is called from our search bar i      will call our App videoSearch function only after a set timer so that it doesn't update too quickly
+            this uses lodash to convert our search function to a debounced function meaning every time onVideoSearch method is called from our search bar it will call our App videoSearch function only after a set timer so that it doesn't update too quickly
             it will call our function 300 ms after each letter we enter and will not execute the next one until 300 after the first has been called
         */
         const debouncedVideoSearch = _.debounce((searchTerm)=>this.videoSearch(searchTerm),300);
@@ -64,10 +62,10 @@ class App extends Component {
                 </div>
 
                 <div className="columns">
-                    <div className="column is-8">
+                    <div className="column is-three-fifths">
                         <VideoDetail video= {this.state.selectedVideo}/>
                     </div>
-                    <div className="column is-4">
+                    <div className="column  is-two-fifths">
                         <VideoList
                         onVideoSelect = {(selectedVideo) =>this.setState({selectedVideo})} 
                         videosArray = {this.state.videosArray}
