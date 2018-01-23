@@ -13,7 +13,7 @@ const VideoDetail = ({video}) =>{
     return (
         <div className="video-detail">
             <div className="video-player-wrapper">
-                <iframe className="video-player" frameBorder="0" src={url}></iframe>
+                <iframe title="youtube embedded" className="video-player" frameBorder="0" src={url}></iframe>
             </div>
             <div className ="box has-text-left">
                 <div className ="video-detail__info">

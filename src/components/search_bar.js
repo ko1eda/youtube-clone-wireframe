@@ -19,6 +19,12 @@ class SearchBar extends Component  {
         super(props);//initialize all the passed in values by calling The Component classes constructor method
         this.state = { term: ''}; //you never directly manipulate state with an equals sign outside of the constuctor, instead use setState()
     }
+
+    handleInputChange(term){
+        this.setState( {term:term});
+        this.props.onVideoSearch(this.state.term);
+    }
+
     render(){ //this render method will be called every time a change event occurs calling our SearchBar.setState() method
         return (
             <div className ="search-bar">
@@ -26,7 +32,7 @@ class SearchBar extends Component  {
                     className= 'search-bar__input input is-rounded is-small' 
                     placeholder ="Search Youtube..."
                     value = {this.state.term} //this value will only change when the state changes, which happens upon rerender by this.SetState 
-                    onChange ={ (event) => this.setState({term:event.target.value}) } //take change event and update our state with the input text
+                    onChange ={ (event) => this.handleInputChange(event.target.value) } //take change event and update our state with the input text
                 />
             </div>
         );

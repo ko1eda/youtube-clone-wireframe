@@ -13,9 +13,6 @@ import React from 'react';
   *Note if you just wanted to destructure an idividual property you would have to pass in that property as a prop to videoListItem and then just use { propertyNameThatYouGaveItWhenYouPassedItIn, otherPropertyName:{iGuessThisOneIsNested} } and that would destructure it
 */
 const VideoListItem = ({video, onVideoSelect, video:{snippet:{title}} }) =>{
-    console.log(video);
-    // console.log(kind);
-    // console.log(title);
    const imgUrl = video.snippet.thumbnails.default.url;
     return (
         <li className ="video-list-item" onClick = { () => onVideoSelect(video) }> 
