@@ -1,0 +1,36 @@
+.video-detail {
+    width: 100%;
+    padding: toRem(10px);
+    margin-bottom: toRem(10px);
+    // border: 1px solid black;
+    .video-player-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: toRem(5px);
+     }
+    .video-player {
+        height: toRem(500px);
+        width: toRem(900px);
+        border-radius: 3px;
+        // padding: toRem(5px);
+    }
+    & .box{
+
+    }
+    &__title{
+        margin-bottom: toRem(10px);
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height:150px;
+        // overflow: hidden;
+        // margin: 20px;
+    }
+
+}
+
+

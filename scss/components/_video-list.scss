@@ -1,12 +1,12 @@
 .video-list{
     list-style: none;
-    font-size: 1.8rem; //18px
+    font-size: toRem(18px); //18px
     display: flex;
     flex-direction: column;
 
-    min-height: 30rem; //300px
-    width: 40%; 
-    padding: 0 2rem;
+    min-height: toRem(300px); //300px
+    width: 100%; 
+    padding: 0 toRem(20px);
     // border: 1px solid black;
     border-radius: .6rem;
     box-shadow: 0 4px 5px rgba(0,0,0,.3);
@@ -15,14 +15,14 @@
 .video-list-item{
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid lightgrey;
-
     align-items: center;
-    height: 14rem;
+    height: toRem(140px);
 
+    border-bottom: 1px solid lightgrey;
     &:last-child{
         border: none;
     }
+    
     &__image-box{
         // background-color: pink;
         display: flex;

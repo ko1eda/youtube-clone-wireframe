@@ -1,6 +1,11 @@
-html {
-    font-size: 62.5%; 
+@function toRem($pxAmnt){
+    $remSize: $pxAmnt/16px; 
+    @return #{$remSize}rem;
 }
+
+// html {
+//     font-size: 62.5%; 
+// }
 // *{
 //     margin: 0;
 //     padding: 0;

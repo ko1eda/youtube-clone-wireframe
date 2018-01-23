@@ -1,8 +1,10 @@
 .search-bar{
-    width: 40%;
+    width: 50%;
+    display: flex;
+    // margin-top: 12px;
+  
     &__input{
-        
-        margin: 3rem 0;
+        margin: toRem(30px) 0;
         // outline: none;
         // border: 1px solid black;
         // display: inline-block;

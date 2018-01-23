@@ -7,6 +7,7 @@ import YTSearch from './modules/yt_api_search';
 
 //import css styles
 import 'bulma/css/bulma.css'
+
 import './assets/css/main.css';
  
 const API_KEY = 'AIzaSyA6rw_zROa1rAqzbCgVLrKbSZiZ32CXpoQ';
@@ -43,20 +44,25 @@ class App extends Component {
     render (){
         return (
             <div className ="container">
-                <div className="columns is-centered">
+                <div className="columns is-mobile is-centered is-marginless">
                     <SearchBar/>
                 </div>
 
-                <div className="columns is-centered">
-                    <VideoDetail video= {this.state.selectedVideo} />
+                <div className="columns">
+                    <div className="column is-8">
+                        <VideoDetail video= {this.state.selectedVideo}/>
+                    </div>
+                    <div className="column is-4">
+                        <VideoList
+                        onVideoSelect = {(selectedVideo) =>this.setState({selectedVideo})} 
+                        videosArray = {this.state.videosArray}
+                        />
+                    </div>
                 </div>
 
-                <div className="columns is-centered">
-                    <VideoList
-                    onVideoSelect = {(selectedVideo) =>this.setState({selectedVideo})} 
-                    videosArray = {this.state.videosArray}
-                    />
-                </div>
+                {/* <div className="columns is-centered">
+                  
+                </div> */}
                 
             </div>
         )

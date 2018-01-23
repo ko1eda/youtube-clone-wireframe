@@ -12,10 +12,14 @@ const VideoDetail = ({video}) =>{
 
     return (
         <div className="video-detail">
-            <iframe className="video-player" src={url}></iframe>
-            <div className ="video-detail__info">
-                <span className="video-detail__title">{video.snippet.title}</span>
-                <span className="video-detail__description">{video.snippet.description}</span>
+            <div className="video-player-wrapper">
+                <iframe className="video-player" frameBorder="0" src={url}></iframe>
+            </div>
+            <div className ="box has-text-left">
+                <div className ="video-detail__info">
+                    <span className="video-detail__title"><h1 className="title is-4">{video.snippet.title}</h1></span>
+                    <span className="video-detail__description">{video.snippet.description}</span>
+                </div>
             </div>
         </div>
     );
